@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>anapkapk.com - APK Downloader</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">anapkapk.com</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Apps</a>
+            <a href="#">Games</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Download Best APK Apps</h1>
+        <p>Safe & Fast Android Apps Download</p>
+        <div class="search-box">
+            <input type="text" placeholder="Search apps..." id="searchInput" onkeyup="searchApps()">
+        </div>
+    </div>
+
+    <!-- APK Cards -->
+    <div class="container" id="appContainer">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="CapCut Pro">
+            <h3>CapCut Pro</h3>
+            <p>Professional Video Editor</p>
+            <a href="apk/capcut-pro.apk" class="btn" download>Download</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="PicsArt Premium">
+            <h3>PicsArt Premium</h3>
+            <p>Photo Editing & Design</p>
+            <a href="apk/picsart-premium.apk" class="btn" download>Download</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Remini Pro">
+            <h3>Remini Pro</h3>
+            <p>Enhance Old Photos</p>
+            <a href="apk/remini-pro.apk" class="btn" download>Download</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="InShot Premium">
+            <h3>InShot Premium</h3>
+            <p>Video & Photo Editor</p>
+            <a href="apk/inshot-premium.apk" class="btn" download>Download</a>
+        </div>
+    </div>
+
+    <!-- Ads -->
+    <div class="ads">Your Ads Here</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 anapkapk.com | All Rights Reserved
+    </div>
+
+<script>
+// Simple search function
+function searchApps() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementById('appContainer').getElementsByClassName('card');
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        if (title.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
