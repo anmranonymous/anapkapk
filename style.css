@@ -79,3 +79,31 @@ footer {
     color: #888;
     margin-top: 30px;
   }
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #00ffcc, #ff416c);
+    color: white;
+}
+#hero h1 {
+    font-size: 50px;
+    margin: 0;
+}
+#hero p {
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+}
+#hero .btn {
+    padding: 15px 30px;
+    background: white;
+    color: #ff416c;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#hero .btn:hover {
+    background: #ff416c;
+    color: white;
+}
