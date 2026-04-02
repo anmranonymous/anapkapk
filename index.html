@@ -1,76 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>anapkapk.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnapKapk.com</title>
 <style>
+/* Body */
 body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
     background: #0d0d0d;
     color: white;
-    font-family: Arial;
-    margin: 0;
 }
 
+/* Navbar */
 .navbar {
     text-align: center;
-    padding: 15px;
-    font-size: 24px;
+    padding: 20px;
+    font-size: 26px;
+    font-weight: bold;
     color: #00ffcc;
-    box-shadow: 0 0 10px #00ffcc;
+    box-shadow: 0 0 20px #00ffcc;
+    transition: 0.3s;
+}
+.navbar:hover {
+    color: #ff4b2b;
 }
 
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #00ffcc, #ff416c);
+    color: white;
+}
+#hero h1 {
+    font-size: 50px;
+    margin: 0;
+}
+#hero p {
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+}
+#hero .btn {
+    padding: 15px 30px;
+    background: white;
+    color: #ff416c;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+#hero .btn:hover {
+    background: #ff416c;
+    color: white;
+}
+
+/* APK Cards */
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 25px;
+    padding: 30px;
 }
-
 .card {
     background: #1a1a1a;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
     text-align: center;
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,255,204,0.2);
 }
-
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px #00ffcc;
+    box-shadow: 0 10px 25px rgba(0,255,204,0.5);
 }
-
-img {
+.card img {
     width: 100%;
     border-radius: 10px;
 }
-
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
+.card h3 {
+    margin: 15px 0 10px 0;
+}
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.card .btn {
+    padding: 10px 20px;
     background: #00ffcc;
     color: black;
-    text-decoration: none;
     border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.card .btn:hover {
+    background: #ff416c;
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    font-size: 14px;
+    color: #888;
+    margin-top: 30px;
 }
 </style>
 </head>
-
 <body>
 
+<!-- Navbar -->
 <div class="navbar">
-🔥 anapkapk.com 🔥
+🔥 AnapKapk.com 🔥
 </div>
 
-<div class="container">
+<!-- Hero Section -->
+<section id="hero">
+<h1>Welcome to AnapKapk</h1>
+<p>Download your favorite APKs quickly & safely</p>
+<a href="#apks" class="btn">Start Downloading</a>
+</section>
+
+<!-- APK Cards -->
+<div class="container" id="apks">
 
 <div class="card">
-<img src="https://via.placeholder.com/300">
-<h3>Sample App</h3>
+<img src="https://via.placeholder.com/300" alt="App">
+<h3>Sample App 1</h3>
 <p>Best App for Android</p>
 <a class="btn" href="#">Download</a>
 </div>
 
+<div class="card">
+<img src="https://via.placeholder.com/300" alt="App">
+<h3>Sample App 2</h3>
+<p>Latest APK Version</p>
+<a class="btn" href="#">Download</a>
 </div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300" alt="App">
+<h3>Sample App 3</h3>
+<p>Fast & Secure Download</p>
+<a class="btn" href="#">Download</a>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+© 2026 AnapKapk. All rights reserved.
+</footer>
 
 </body>
 </html>
