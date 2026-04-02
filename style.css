@@ -1,4 +1,14 @@
-/* Premium Stylesheet for AN APK */
+/* Google Fonts - Premium Typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+    --primary-bg: #0f0f0f;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --accent-color: #00ff88; /* Greenish Logo Color */
+    --text-main: #ffffff;
+    --text-dim: #b3b3b3;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,142 +17,124 @@
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    overflow-x: hidden;
 }
 
-/* Header & Nav */
+/* Video Background Layer */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: brightness(0.4); /* Video ko thoda dark rakha hai taaki text dikhe */
+    object-fit: cover;
+}
+
+/* Header & Premium Logo */
 header {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    padding: 20px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-nav {
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
     font-size: 24px;
-    font-weight: 700;
-    color: white;
+    font-weight: 800;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.logo span {
-    color: #00d4ff;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #00d4ff;
-}
-
-/* Hero Section */
-.hero {
+/* Modern Search Bar */
+.search-container {
     text-align: center;
-    padding: 80px 20px;
-    background: white;
-    margin-bottom: 30px;
+    padding: 100px 20px 50px;
 }
 
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+.search-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.btn-main {
-    display: inline-block;
-    padding: 12px 30px;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
-    text-decoration: none;
+input[type="text"] {
+    width: 60%;
+    padding: 15px 25px;
     border-radius: 50px;
-    margin-top: 20px;
-    font-weight: 600;
-    transition: 0.4s;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: 0.3s;
 }
 
-.btn-main:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(106, 17, 203, 0.3);
+input[type="text"]:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
 }
 
-/* App Cards Area */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.section-title {
-    margin-bottom: 25px;
-    border-left: 5px solid #2575fc;
-    padding-left: 15px;
-}
-
+/* App Grid - Clean & Separate Layout */
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 40px 5%;
 }
 
+/* Individual App Card */
 .app-card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 20px;
     text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
+/* The Magic "Tap" Color Change logic */
+.app-card:active {
+    transform: scale(0.95);
+    background: linear-gradient(135deg, #007cf0, #00dfd8); /* Tap par Blue/Green mix */
+}
+
+/* Unique hover for each card */
 .app-card:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #ffffff 0%, #eef2f3 100%);
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
-.app-icon {
-    font-size: 40px;
+.app-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
     margin-bottom: 15px;
 }
 
-.download-btn {
-    display: block;
-    margin-top: 15px;
-    padding: 8px;
-    background: #2575fc;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: 0.3s;
+.app-card h3 {
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.download-btn:hover {
-    background: #6a11cb;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #777;
+.app-card p {
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 5px;
 }
