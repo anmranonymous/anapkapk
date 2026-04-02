@@ -1,80 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnapKapk - Premium APK Mods</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>anapkapk.com</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: #111;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.logo {
+    font-size: 22px;
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+.menu a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #00ffcc;
+}
+
+.hero p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* Search */
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: #1c1c1c;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #000;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: black;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00cc99;
+}
+
+/* Ads */
+.ads {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    border: 1px dashed #444;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+</style>
+
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">⛱️ anpapk<span>.com</span> 🤖</div>
-    </nav>
+<!-- Navbar -->
+<div class="navbar">
+    <div class="logo">🔥 anapkapk.com</div>
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Apps</a>
+        <a href="#">Games</a>
+    </div>
+</div>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to <span>AnapKapk</span> 🤖</h1>
-            <p>Download Premium & Safe APK Mods with High Speed</p>
-            <a href="#apks" class="btn-main">Explore Apps</a>
-        </div>
-    </header>
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Download Best APK Apps</h1>
+    <p>Safe & Fast Android Apps Download</p>
 
-    <main class="container" id="apks">
-        <h2 class="section-title">Latest Modded Apps</h2>
-        
-        <div class="app-grid">
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/capcut-logo-png-1.png" alt="CapCut Pro" width="100" height="100">
-                </div>
-                <h3>CapCut Pro</h3>
-                <p>Pro Unlocked | No Watermark</p>
-                <a href="apps/capcut.html" class="btn-app">Download</a>
-            </div>
+    <div class="search-box">
+        <input type="text" placeholder="Search apps...">
+    </div>
+</div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/picsart-logo-png-2.png" alt="PicsArt Pro" width="100" height="100">
-                </div>
-                <h3>PicsArt Pro</h3>
-                <p>Gold Membership | All Assets</p>
-                <a href="apps/picsart.html" class="btn-app">Download</a>
-            </div>
+<!-- Ads -->
+<div class="ads">
+    Your Ads Here
+</div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/remini-logo-png-3.png" alt="Remini Pro" width="100" height="100">
-                </div>
-                <h3>Remini Pro</h3>
-                <p>Enhance Photos | Unlocked</p>
-                <a href="apps/remini.html" class="btn-app">Download</a>
-            </div>
+<!-- Apps -->
+<div class="container">
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/chat-gpt-logo-png-7.png" alt="ChatGPT" width="100" height="100">
-                </div>
-                <h3>ChatGPT AI</h3>
-                <p>Smart Assistant | Plus Features</p>
-                <a href="apps/chatgpt.html" class="btn-app">Download</a>
-            </div>
+<div class="card">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Sample App</h3>
+    <p>Best Android App</p>
+    <a class="btn" href="#">Download</a>
+</div>
 
-            <div class="card">
-                <div class="card-img">
-                    <img src="images/inshot-logo-png-4.png" alt="InShot" width="100" height="100">
-                </div>
-                <h3>InShot Pro</h3>
-                <p>Full Filters | No Ads</p>
-                <a href="apps/inshot.html" class="btn-app">Download</a>
-            </div>
-        </div>
-    </main>
+<div class="card">
+    <img src="https://via.placeholder.com/300x200">
+    <h3>Cool Game</h3>
+    <p>Fun Android Game</p>
+    <a class="btn" href="#">Download</a>
+</div>
 
-    <footer>
-        <p>© 2026 AnapKapk. Premium Experience for Creators. 🚀</p>
-    </footer>
+</div>
+
+<!-- Ads -->
+<div class="ads">
+    Your Ads Here
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    © 2026 anapkapk.com | All Rights Reserved
+</div>
 
 </body>
 </html>
