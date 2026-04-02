@@ -14,10 +14,35 @@ body {
     font-weight: bold;
     color: #00ffcc;
     box-shadow: 0 0 20px #00ffcc;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(120deg, #00ffcc, #ff416c);
+    color: white;
+}
+#hero h1 {
+    font-size: 50px;
+    margin: 0;
+}
+#hero p {
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+}
+#hero .btn {
+    padding: 15px 30px;
+    background: white;
+    color: #ff416c;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.3s;
 }
-.navbar:hover {
-    color: #ff416c;
+#hero .btn:hover {
+    background: #ff416c;
+    color: white;
 }
 
 /* Container */
@@ -53,12 +78,12 @@ body {
     margin-bottom: 15px;
 }
 
-/* Button */
+/* Buttons */
 .btn {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
-    background: #00ffcc;
+    background: linear-gradient(120deg, #00ffcc, #ff416c);
     color: black;
     text-decoration: none;
     border-radius: 10px;
@@ -66,7 +91,7 @@ body {
     transition: 0.3s;
 }
 .btn:hover {
-    background: #ff416c;
+    background: linear-gradient(120deg, #ff416c, #00ffcc);
     color: white;
 }
 
@@ -78,32 +103,4 @@ footer {
     font-size: 14px;
     color: #888;
     margin-top: 30px;
-  }
-/* Hero Section */
-#hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(120deg, #00ffcc, #ff416c);
-    color: white;
-}
-#hero h1 {
-    font-size: 50px;
-    margin: 0;
-}
-#hero p {
-    font-size: 20px;
-    margin: 10px 0 20px 0;
-}
-#hero .btn {
-    padding: 15px 30px;
-    background: white;
-    color: #ff416c;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-#hero .btn:hover {
-    background: #ff416c;
-    color: white;
 }
