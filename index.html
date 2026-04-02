@@ -2,139 +2,118 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>anapkapk.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>anapkapk.com - APK Downloader</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0f2027, #0d0d0d);
-    color: white;
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
+body { background:#f9f9f9; color:#333; }
+a { text-decoration:none; color:inherit; }
 
 /* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 30px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #00ffcc;
-}
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:20px; background:#1a73e8; color:#fff; }
+.navbar .logo { font-size:24px; font-weight:700; }
+.navbar .menu a { margin-left:20px; color:#fff; font-weight:500; }
 
-.logo {
-    font-size: 22px;
-    color: #00ffcc;
-    font-weight: bold;
-    text-shadow: 0 0 10px #00ffcc;
-}
+/* Hero Section */
+.hero { text-align:center; padding:80px 20px; background:#e8f0fe; }
+.hero h1 { font-size:36px; margin-bottom:10px; }
+.hero p { font-size:18px; margin-bottom:20px; color:#555; }
+.search-box input { padding:10px 15px; width:300px; border:1px solid #ccc; border-radius:5px; }
 
-.menu a {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    color: #00ffcc;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.hero h1 {
-    font-size: 42px;
-    color: #00ffcc;
-    text-shadow: 0 0 20px #00ffcc;
-}
-
-.hero p {
-    margin-top: 10px;
-    color: #aaa;
-}
-
-/* Search */
-.search-box input {
-    padding: 12px;
-    width: 260px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    margin-top: 20px;
-}
-
-/* Container */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    padding: 20px;
-}
-
-/* Card */
-.card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
-    padding: 15px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: 0.4s;
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 25px #00ffcc;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-/* Button */
-.btn {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #00ffcc, #00cc99);
-    color: black;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-}
+/* Container for apps */
+.container { display:flex; flex-wrap:wrap; justify-content:center; padding:40px 20px; gap:20px; }
+.card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:200px; text-align:center; transition:transform 0.3s; }
+.card:hover { transform:translateY(-5px); }
+.card img { width:100%; border-radius:10px; margin-bottom:15px; }
+.card h3 { font-size:18px; margin-bottom:5px; }
+.card p { font-size:14px; color:#777; margin-bottom:10px; }
+.btn { display:inline-block; padding:8px 15px; background:#1a73e8; color:#fff; border-radius:5px; font-weight:500; }
 
 /* Ads */
-.ads {
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-    border: 1px dashed #00ffcc;
-    border-radius: 15px;
-    background: rgba(0,0,0,0.3);
-}
+.ads { text-align:center; padding:20px; background:#fff; margin:20px auto; width:90%; border:1px dashed #ccc; color:#777; }
 
 /* Footer */
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #aaa;
+.footer { text-align:center; padding:20px; background:#1a73e8; color:#fff; margin-top:40px; }
+
+/* Responsive */
+@media(max-width:768px){
+    .navbar { flex-direction:column; gap:10px; }
+    .search-box input { width:90%; }
+    .container { flex-direction:column; align-items:center; }
 }
 </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">anapkapk.com</div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Apps</a>
+            <a href="#">Games</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Download Best APK Apps</h1>
+        <p>Safe & Fast Android Apps Download</p>
+        <div class="search-box">
+            <input type="text" placeholder="Search apps..." id="searchInput" onkeyup="searchApps()">
+        </div>
+    </div>
+
+    <!-- APK Cards -->
+    <div class="container" id="appContainer">
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="App">
+            <h3>Sample App</h3>
+            <p>Best Android App</p>
+            <a href="apk/sample-app.apk" class="btn" download>Download</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Game">
+            <h3>Cool Game</h3>
+            <p>Fun Android Game</p>
+            <a href="apk/cool-game.apk" class="btn" download>Download</a>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="App">
+            <h3>Music App</h3>
+            <p>Listen & Enjoy Music</p>
+            <a href="apk/music-app.apk" class="btn" download>Download</a>
+        </div>
+    </div>
+
+    <!-- Ads -->
+    <div class="ads">Your Ads Here</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2026 anapkapk.com | All Rights Reserved
+    </div>
+
+<script>
+// Simple search function
+function searchApps() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let cards = document.getElementById('appContainer').getElementsByClassName('card');
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+        if (title.includes(input)) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
