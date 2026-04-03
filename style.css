@@ -183,3 +183,33 @@ html {
     width:35px;
     height:35px;
 }
+body {
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: #fff;
+}
+
+.container {
+    background: transparent;
+}
+
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    color: #fff;
+}
+
+.navbar {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+.hero {
+    background: linear-gradient(135deg,#00c853,#1b5e20);
+}
+.card:hover {
+    transform: translateY(-10px) scale(1.08);
+}
+
+.btn {
+    cursor: pointer;
+}
